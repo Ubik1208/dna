@@ -51,6 +51,21 @@ const returnRandBase = () => {
             return false;
           }
         
+        },
+        complementStrand(){
+          let complementaryDnaStrand = dna;
+          for (let i = 0; i<complementaryDnaStrand.length; i++){
+            if (complementaryDnaStrand[i] === 'A'){
+              complementaryDnaStrand[i] = 'T';
+            } else if (complementaryDnaStrand[i] === 'T'){
+              complementaryDnaStrand[i] = 'A';
+            } else if (complementaryDnaStrand[i] === 'C'){
+              complementaryDnaStrand[i] = 'G';
+            } else if (complementaryDnaStrand[i] === 'G'){
+              complementaryDnaStrand[i] = 'C';
+            }
+          }
+          return complementaryDnaStrand
         }
       }
     }

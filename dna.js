@@ -29,6 +29,7 @@ const returnRandBase = () => {
         this.dna[dnaindex] =newDnaBases[Math.floor(Math.random() * 3)]
         return this.dna;
       },
+
       compareDNA(pAequor) {
         let ammountOfCommon = 0;
         for (let i = 0; i<this.dna.length; i++){
@@ -36,8 +37,9 @@ const returnRandBase = () => {
                ammountOfCommon++;
               }
             }
-            return "specimen #1 and specimen #2 have " + (ammountOfCommon / 15*100).toFixed(2) +  "% DNA in common"
+            return "Specimen A and Specimen B have " + (ammountOfCommon / 15*100).toFixed(2) +  "% DNA in common"
         },
+      
         willLikelySurvive() {
           let TotalCandG = 0;
           for (let i = 0; i<this.dna.length; i++){
@@ -52,6 +54,7 @@ const returnRandBase = () => {
           }
         
         },
+
         complementStrand(){
           let complementaryDnaStrand = dna;
           for (let i = 0; i<complementaryDnaStrand.length; i++){
@@ -71,7 +74,7 @@ const returnRandBase = () => {
     }
 
 //test of the factory function
-// console.log(pAequorFactory(1, mockUpStrand()).willLikelySurvive())
+//console.log(pAequorFactory(1, mockUpStrand()).willLikelySurvive())
 //here goes the code to creat 30 units with different DNA with probability >60 % to survive
 
   const morePaequr = (num) => {
